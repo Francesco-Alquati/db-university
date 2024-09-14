@@ -21,3 +21,12 @@ SELECT departments.name AS department_name, COUNT(*) AS numero_corsi
 FROM degrees
 INNER JOIN departments ON `degrees`.`department_id` = `departments`.`id`
 GROUP BY departments.name;
+
+
+QUERY JOIN
+
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT students.id, degrees.name 
+FROM students 
+INNER JOIN degrees ON students.degree_id = degrees.id 
+WHERE degrees.name LIKE '%economi%';
